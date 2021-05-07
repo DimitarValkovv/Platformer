@@ -6,6 +6,8 @@ public class NextLevelOnTouch : MonoBehaviour
 {
     public GameObject thePlayer;
     public GameObject nextLevelMenu;
+    public GameObject timeBox;
+    public GameObject scoreBox;
 
     void OnTriggerEnter(Collider other)
     {
@@ -20,5 +22,7 @@ public class NextLevelOnTouch : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.4f);
         Time.timeScale = 0;
         nextLevelMenu.SetActive(true);
+        timeBox.SetActive(false);
+        scoreBox.SetActive(false);
     }
 }
