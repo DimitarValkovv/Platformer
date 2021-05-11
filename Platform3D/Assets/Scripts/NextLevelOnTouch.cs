@@ -19,6 +19,8 @@ public class NextLevelOnTouch : MonoBehaviour
     public int scoreCalc;
     public int totalScored;
 
+    public GameObject nextLevelButton;
+
     void OnTriggerEnter(Collider other)
     {
       if(other.tag == "Player")
@@ -40,6 +42,7 @@ public class NextLevelOnTouch : MonoBehaviour
         nextLevelMenu.SetActive(true);
         timeBox.SetActive(false);
         scoreBox.SetActive(false);
+        nextLevelButton.SetActive(true);
     }
 
     IEnumerator CalculateScore()
