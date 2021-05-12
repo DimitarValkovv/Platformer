@@ -7,6 +7,7 @@ public class LevelButton02 : MonoBehaviour
 {
     public GameObject fadeIn;
     public GameObject gameOverTrig;
+    public GameObject theButton;
     public void NextLevelOnClick()
     {
         StartCoroutine(LoadNextLevel());
@@ -15,6 +16,7 @@ public class LevelButton02 : MonoBehaviour
     IEnumerator LoadNextLevel()
     {
         fadeIn.GetComponent<Animator>().Play("FadeIn");
+        theButton.SetActive(false);
         Time.timeScale = 1;
         gameOverTrig.SetActive(false);
         yield return new WaitForSecondsRealtime(3.5f);
