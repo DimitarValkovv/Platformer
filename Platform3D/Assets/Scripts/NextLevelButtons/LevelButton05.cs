@@ -1,0 +1,27 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class LevelButton05 : MonoBehaviour
+{
+    public GameObject fadeIn;
+    public GameObject gameOverTrig;
+    public GameObject theButton;
+    public void NextLevelOnClick()
+    {
+        StartCoroutine(LoadNextLevel());
+    }
+
+    IEnumerator LoadNextLevel()
+    {
+        fadeIn.GetComponent<Animator>().Play("FadeIn");
+        theButton.SetActive(false);
+        Time.timeScale = 1;
+        gameOverTrig.SetActive(false);
+        yield return new WaitForSecondsRealtime(3.5f);
+        SceneManager.LoadScene(5);
+        Time.timeScale = 1;
+        GlobalScore.currentScore = 0;
+    }
+}

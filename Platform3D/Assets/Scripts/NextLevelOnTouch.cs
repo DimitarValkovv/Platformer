@@ -21,6 +21,8 @@ public class NextLevelOnTouch : MonoBehaviour
 
     public GameObject nextLevelButton;
 
+    public GameObject levelBox;
+
     void OnTriggerEnter(Collider other)
     {
       if(other.tag == "Player")
@@ -42,6 +44,7 @@ public class NextLevelOnTouch : MonoBehaviour
         nextLevelMenu.SetActive(true);
         timeBox.SetActive(false);
         scoreBox.SetActive(false);
+        levelBox.SetActive(false);
         nextLevelButton.SetActive(true);
     }
 
