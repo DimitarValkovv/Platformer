@@ -8,6 +8,7 @@ public class LevelButton05 : MonoBehaviour
     public GameObject fadeIn;
     public GameObject gameOverTrig;
     public GameObject theButton;
+    public AudioSource gameMusic;
     public void NextLevelOnClick()
     {
         StartCoroutine(LoadNextLevel());
@@ -15,6 +16,7 @@ public class LevelButton05 : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
+        gameMusic.Stop();
         fadeIn.GetComponent<Animator>().Play("FadeIn");
         theButton.SetActive(false);
         Time.timeScale = 1;

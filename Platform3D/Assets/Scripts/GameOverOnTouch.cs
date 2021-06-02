@@ -12,6 +12,7 @@ public class GameOverOnTouch : MonoBehaviour
     public GameObject theTime;
 
     public GameObject fadeIn;
+    public AudioSource gameMusic;
 
      void OnTriggerEnter(Collider target)
     {
@@ -31,6 +32,7 @@ public class GameOverOnTouch : MonoBehaviour
 
     IEnumerator ToMainMenu()
     {
+        gameMusic.Stop();
         fadeIn.GetComponent<Animator>().Play("FadeIn");
         Time.timeScale = 1f;
         yield return new WaitForSeconds(3.5f);

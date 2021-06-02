@@ -22,6 +22,7 @@ public class NextLevelOnTouch : MonoBehaviour
     public GameObject nextLevelButton;
 
     public GameObject levelBox;
+    public AudioSource levelUpSound;
 
     void OnTriggerEnter(Collider other)
     {
@@ -35,6 +36,7 @@ public class NextLevelOnTouch : MonoBehaviour
     IEnumerator NextLevel()
     {
         yield return new WaitForSecondsRealtime(0.4f);
+        levelUpSound.Play();
         timeCalc = GlobalTimer.extendScore * 10;
         timeLeft.GetComponent<Text>().text = "Time: " + GlobalTimer.extendScore + " x 10";
         theScore.GetComponent<Text>().text = "Score: " + GlobalScore.currentScore;

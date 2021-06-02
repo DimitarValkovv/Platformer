@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class RestartLevel01 : MonoBehaviour
 {
     public GameObject fadeIn;
+    public AudioSource gameMusic;
 
    public void RestartLevel()
     {
@@ -14,6 +15,7 @@ public class RestartLevel01 : MonoBehaviour
 
     IEnumerator FadeToRetry()
     {
+        gameMusic.Stop();
         fadeIn.GetComponent<Animator>().Play("FadeIn");
         Time.timeScale = 1f;
         yield return new WaitForSeconds(3.5f);
