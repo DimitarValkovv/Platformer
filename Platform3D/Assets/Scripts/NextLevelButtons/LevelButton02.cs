@@ -9,6 +9,7 @@ public class LevelButton02 : MonoBehaviour
     public GameObject gameOverTrig;
     public GameObject theButton;
     public AudioSource gameMusic;
+    public GameObject menuButton;
     public void NextLevelOnClick()
     {
         StartCoroutine(LoadNextLevel());
@@ -19,6 +20,7 @@ public class LevelButton02 : MonoBehaviour
         gameMusic.Stop();
         fadeIn.GetComponent<Animator>().Play("FadeIn");
         theButton.SetActive(false);
+        menuButton.SetActive(false);
         Time.timeScale = 1;
         gameOverTrig.SetActive(false);
         yield return new WaitForSecondsRealtime(3.5f);

@@ -43,6 +43,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    public AudioSource jumpSound;
+
     private void Awake()
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
@@ -109,7 +111,10 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         if (!m_jumpInput && Input.GetKey(KeyCode.Space))
         {
             m_jumpInput = true;
+         
+
         }
+       
     }
 
     private void FixedUpdate()
@@ -216,6 +221,9 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         if (!m_isGrounded && m_wasGrounded)
         {
             m_animator.SetTrigger("Jump");
+            jumpSound.Play();
         }
     }
+
+
 }

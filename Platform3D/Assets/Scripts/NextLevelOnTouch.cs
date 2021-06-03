@@ -23,6 +23,7 @@ public class NextLevelOnTouch : MonoBehaviour
 
     public GameObject levelBox;
     public AudioSource levelUpSound;
+    public GameObject mainMenuButton;
 
     void OnTriggerEnter(Collider other)
     {
@@ -48,6 +49,7 @@ public class NextLevelOnTouch : MonoBehaviour
         scoreBox.SetActive(false);
         levelBox.SetActive(false);
         nextLevelButton.SetActive(true);
+        mainMenuButton.SetActive(true);
     }
 
     IEnumerator CalculateScore()
