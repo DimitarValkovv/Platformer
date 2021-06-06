@@ -20,5 +20,6 @@ public class RestartLevel01 : MonoBehaviour
         Time.timeScale = 1f;
         yield return new WaitForSeconds(3.5f);
         SceneManager.LoadScene(1);
+        GlobalScore.currentScore = 0;
     }
 }
