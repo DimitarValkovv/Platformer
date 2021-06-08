@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 2aef61c999320b04b94510bdfca432e5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hontizema
+  fontNames:
+  - Hontizema
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b541a67a624dc274ea59fb64df6e2f1b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
