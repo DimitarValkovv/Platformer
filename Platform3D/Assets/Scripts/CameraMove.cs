@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
- 
+    bool cameraIsMoving = false;
+
     void Update()
     {
-        transform.Translate(Vector3.left * Time.timeScale * 0.025f);
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            cameraIsMoving = true;
+        }
+
+        if(cameraIsMoving == true)
+        {
+            transform.Translate(Vector3.left * Time.timeScale * 0.05f);
+        }
     }
+
 }
+
