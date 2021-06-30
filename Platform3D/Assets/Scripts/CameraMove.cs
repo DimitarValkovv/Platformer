@@ -6,6 +6,11 @@ public class CameraMove : MonoBehaviour
 {
     bool cameraIsMoving = false;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
@@ -15,7 +20,7 @@ public class CameraMove : MonoBehaviour
 
         if(cameraIsMoving == true)
         {
-            transform.Translate(Vector3.left * Time.timeScale * 0.05f);
+            transform.Translate(Vector3.left * Time.timeScale * 0.08f);
         }
     }
 

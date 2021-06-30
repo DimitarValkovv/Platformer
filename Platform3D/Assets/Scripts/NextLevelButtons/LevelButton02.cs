@@ -24,7 +24,7 @@ public class LevelButton02 : MonoBehaviour
         Time.timeScale = 1;
         gameOverTrig.SetActive(false);
         yield return new WaitForSecondsRealtime(3.5f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1;
         GlobalScore.currentScore = 0;
     }

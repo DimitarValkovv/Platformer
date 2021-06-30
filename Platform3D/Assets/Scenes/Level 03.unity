@@ -6076,8 +6076,8 @@ GameObject:
   - component: {fileID: 869583907}
   - component: {fileID: 869583906}
   - component: {fileID: 869583905}
-  - component: {fileID: 869583904}
   - component: {fileID: 869583903}
+  - component: {fileID: 869583904}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6139,13 +6139,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 869583901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de990bd59de0e041b4c8c47469fcda7, type: 3}
+  m_Script: {fileID: 11500000, guid: 572db4c02ddb6814893cccb78b48d3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeIn: {fileID: 1361312052}
   gameOverTrig: {fileID: 2128765616}
   theButton: {fileID: 1583135166}
   gameMusic: {fileID: 835033102}
+  menuButton: {fileID: 654933970}
 --- !u!114 &869583905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10542,7 +10543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 869583904}
+      - m_Target: {fileID: 0}
         m_MethodName: NextLevelOnClick
         m_Mode: 1
         m_Arguments:
