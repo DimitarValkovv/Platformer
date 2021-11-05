@@ -20,6 +20,6 @@ public class MenuToLevelSelect : MonoBehaviour
         thePlayer.SetActive(false);
         yield return new WaitForSeconds(4);
         thePlayer.SetActive(true);
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(10);
     }
 }
